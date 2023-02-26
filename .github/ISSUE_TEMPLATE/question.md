@@ -1,18 +1,9 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
-
-- [问题描述](#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
 ---
 name: question
 about: question about this project
 title: ''
 labels: question
 assignees: ronething
-
 ---
 
 <!--
