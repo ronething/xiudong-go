@@ -55,7 +55,7 @@ Use "showstart [command] --help" for more information about a command.
 
 #### 免责声明
 
-见 [Disclaimer](./Disclaimer.md)
+- 见 [Disclaimer](./Disclaimer.md)
 
 #### acknowledgement
 
