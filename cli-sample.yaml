@@ -1,0 +1,7 @@
+# 存储 localStorage 相关
+
+token: dc98893ca4xxx019abaf80c341872 # localStorage.token
+sign: 33f09e0f1xxxxd83821a9945f3da0de # localStorage.sign
+st_flpv: vkx9gxxxxcZH2F9k665 # 注意这里是最外层的 st_flpv 而不是 userInfo.data.st_flpv
+cityId: 20 # 默认 20 即可
+userId: 4612349 # userInfo.data.userId

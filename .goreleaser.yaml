@@ -1,0 +1,29 @@
+# This is an example .goreleaser.yml file with some sensible defaults.
+# Make sure to check the documentation at https://goreleaser.com
+project_name: xiudong
+
+env:
+  - GO111MODULE=on
+before:
+  hooks:
+    - go mod tidy
+builds:
+  - main: ./cli
+    binary: showstart
+    ldflags: '-s -w -X xiudong/cli/cmd.version={{.Version}}
+    -X xiudong/cli/cmd.commit={{.ShortCommit}}
+    -X xiudong/cli/cmd.date={{.Date}}'
+    goos:
+      - linux
+      - windows
+      - darwin
+archives:
+  - files:
+      - README.md
+      - cli-sample.yaml
+      - img/*
+    format_overrides:
+      - goos: windows
+        format: zip
+release:
+  prerelease: auto
