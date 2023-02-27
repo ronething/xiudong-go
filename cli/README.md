@@ -29,7 +29,7 @@ userId: 4612349 # userInfo.data.userId
 3、列出场次票种列表
 
 ```shell
-showstart.exe tickets -a 173474 --config ashing.yaml
+showstart.exe tickets -a 173474 --config cli-sample.yaml
 ```
 
 ```console
@@ -49,7 +49,7 @@ showstart.exe tickets -a 173474 --config ashing.yaml
 > 有一些场次需要指定身份 id 实名
 
 ```shell
-showstart.exe idCard --config ashing.yaml
+showstart.exe idCard --config cli-sample.yaml
 ```
 
 ```shell
