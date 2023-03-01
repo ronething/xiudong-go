@@ -46,8 +46,6 @@ showstart.exe tickets -a 173474 --config cli-sample.yaml
 
 4、获取身份 id
 
-> 有一些场次需要指定身份 id 实名
-
 ```shell
 showstart.exe idCard --config cli-sample.yaml
 ```
