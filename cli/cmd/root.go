@@ -16,7 +16,7 @@ import (
 )
 
 var cfgFile string
-var globalConfig *showstart.WapEncryptConfig
+var globalConfig *showstart.WapEncryptConfigV3
 
 //var globalClient = resty.New()
 
@@ -100,12 +100,13 @@ func initConfig() {
 	// If a config file is found, read it in.
 	if err := viper.ReadInConfig(); err == nil {
 		fmt.Println("使用的配置文件:", viper.ConfigFileUsed())
-		globalConfig = &showstart.WapEncryptConfig{
-			Sign:   viper.GetString("sign"),
-			StFlpv: viper.GetString("st_flpv"),
-			Token:  viper.GetString("token"),
-			UserId: viper.GetUint32("userId"),
-			AesKey: viper.GetString("aesKey"),
+		globalConfig = &showstart.WapEncryptConfigV3{
+			Sign:        viper.GetString("sign"),
+			StFlpv:      viper.GetString("st_flpv"),
+			Token:       viper.GetString("token"),
+			UserId:      viper.GetUint32("userId"),
+			AccessToken: viper.GetString("accessToken"),
+			IdToken:     viper.GetString("idToken"),
 		}
 		log.Printf("globalConfig is %+v\n", globalConfig)
 	}

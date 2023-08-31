@@ -86,3 +86,23 @@ type TicketItem struct {
 	ShowTime              string `json:"showTime"`
 	MemberNum             int    `json:"memberNum"`
 }
+
+type WafTokenResult struct {
+	AccessToken struct {
+		Expire      int    `json:"expire"`
+		AccessToken string `json:"access_token"`
+		Msg         string `json:"msg"`
+	} `json:"accessToken"`
+	IDToken struct {
+		IDToken string `json:"id_token"`
+		Expire  int    `json:"expire"`
+		Msg     string `json:"msg"`
+	} `json:"idToken"`
+}
+
+type WafTokenResp struct {
+	Result  WafTokenResult `json:"result"`
+	Success bool           `json:"success"`
+	State   interface{}    `json:"state"`
+	Msg     string         `json:"msg"`
+}

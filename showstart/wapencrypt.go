@@ -35,6 +35,7 @@ type WapEncrypt struct {
 	Source *Source
 }
 
+// Deprecated: NewWapEncrypt use v3 instead
 func NewWapEncrypt(config *WapEncryptConfig, source *Source) (*WapEncrypt, error) {
 	if config.Token == "" { // fix issue #36
 		config.Token = getRandStr(32)

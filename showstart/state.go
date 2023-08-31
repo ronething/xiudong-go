@@ -24,3 +24,7 @@ func checkState(state interface{}) error {
 	// 其他情况都是返回错误
 	return errState
 }
+
+func getState(state interface{}) string {
+	return fmt.Sprintf("%v", state)
+}
