@@ -27,12 +27,10 @@ func TestWapEncryptV3(t *testing.T) {
 			name: "one",
 			fields: fields{
 				Config: &WapEncryptConfigV3{
-					Sign:        "05cedc227d1a0b181174d92e50d871ea",
-					StFlpv:      "nJmxO93zd8Qt7aWor4W3",
-					Token:       "c559aab27834dfa16c939420794b038e",
-					UserId:      4613349,
-					AccessToken: "ad6c5049021801fa64cdd17ed38ca5e4",
-					IdToken:     "1bcda8b712def05264cdd17e1d21f21a",
+					Sign:   "05cedc227d1axxxx1174d92e50d871ea",
+					StFlpv: "nJmxxxxd8Qt7aWor4W3",
+					Token:  "c559xxxx7834dfa16c939420794b038e",
+					UserId: 4612249,
 				},
 				Source: &SourceV3{
 					URL:    "/wap/activity/V2/ticket/list",

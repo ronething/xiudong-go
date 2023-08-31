@@ -36,7 +36,7 @@ type SourceV3 struct {
 }
 
 func NewWapEncryptV3(config *WapEncryptConfigV3, source *SourceV3) (*WapEncryptV3, error) {
-	if config.Token == "" { // fix issue #36
+	if config.Token == "" {
 		config.Token = getRandStr(32)
 	}
 	w := &WapEncryptV3{
