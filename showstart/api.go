@@ -70,7 +70,7 @@ func (s *ShowStart) GetAddress() (*Address, error) {
 	return s.Address, nil
 }
 
-//GetCpList 获取观演人列表
+// GetCpList 获取观演人列表
 func (s *ShowStart) GetCpList(pageNo int64) ([]CpItem, error) {
 	// 目前看来 pageNo 貌似没有特别的作用 例如传了 1 和 2 都是一样的返回结果 不知道秀动服务端如何处理的
 
@@ -93,7 +93,7 @@ func (s *ShowStart) GetCpList(pageNo int64) ([]CpItem, error) {
 	return resp.Result, nil
 }
 
-//GetTicketList 获取场次票种列表
+// GetTicketList 获取场次票种列表
 func (s *ShowStart) GetTicketList(activityId string) ([]TicketListResult, error) {
 	source := &SourceV3{
 		URL:    "/wap/activity/V2/ticket/list",
@@ -145,6 +145,9 @@ func (s *ShowStart) GetWafToken() (*WafTokenResult, error) {
 
 func (s *ShowStart) SendRequest(ctx context.Context, source *SourceV3, response interface{}) error {
 	request := s.Client.R().AddRetryCondition(func(resp *resty.Response, err error) bool {
+		if err != nil {
+			return false
+		}
 		var sr ResponseWrapper
 		if err = json.Unmarshal(resp.Body(), &sr); err != nil {
 			return false

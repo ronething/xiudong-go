@@ -102,15 +102,6 @@ type sourceDataTmp struct {
 	RandStr string                 `json:"ranstr"` // 这个 key 是 ranstr
 }
 
-// 暂时不需要用到 仅作为标识
-type sourceDataNew struct {
-	Data     string `json:"data"`
-	Sign     string `json:"sign"`
-	AppId    string `json:"appid"`
-	Terminal string `json:"terminal"`
-	Version  string `json:"version"`
-}
-
 // getInjectData data 注入
 func (w *WapEncrypt) getInjectData(qtime int64, randStr string) (map[string]interface{}, error) {
 	if w.Source.Data == nil {

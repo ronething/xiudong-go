@@ -1,6 +1,6 @@
 module xiudong
 
-go 1.18
+go 1.20
 
 require (
 	github.com/forgoer/openssl v1.1.1
