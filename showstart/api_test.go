@@ -12,12 +12,11 @@ func getTestShowStart() *ShowStart {
 	// 读取配置文件 默认在 ../.showstart.yaml
 	viper.SetConfigFile("../.showstart.yaml")
 	if err := viper.ReadInConfig(); err == nil {
-		config := &WapEncryptConfig{
+		config := &WapEncryptConfigV3{
 			Sign:   viper.GetString("sign"),
 			StFlpv: viper.GetString("st_flpv"),
 			Token:  viper.GetString("token"),
 			UserId: viper.GetUint32("userId"),
-			AesKey: viper.GetString("aesKey"),
 		}
 		log.Printf("config is %+v\n", config)
 		return &ShowStart{

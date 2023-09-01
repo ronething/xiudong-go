@@ -1,12 +1,14 @@
 module xiudong
 
-go 1.18
+go 1.20
 
 require (
 	github.com/forgoer/openssl v1.1.1
 	github.com/go-resty/resty/v2 v2.7.0
+	github.com/magiconair/properties v1.8.5
 	github.com/mitchellh/go-homedir v1.1.0
 	github.com/modood/table v0.0.0-20200225102042-88de94bb9876
+	github.com/pkg/errors v0.9.1
 	github.com/spf13/cobra v1.3.0
 	github.com/spf13/viper v1.10.0
 	github.com/zeromicro/go-zero v1.3.2
@@ -17,7 +19,6 @@ require (
 	github.com/gopherjs/gopherjs v0.0.0-20200217142428-fce0ec30dd00 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
 	github.com/inconshreveable/mousetrap v1.0.0 // indirect
-	github.com/magiconair/properties v1.8.5 // indirect
 	github.com/mitchellh/mapstructure v1.4.3 // indirect
 	github.com/pelletier/go-toml v1.9.4 // indirect
 	github.com/smartystreets/goconvey v1.7.2 // indirect

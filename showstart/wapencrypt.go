@@ -35,6 +35,7 @@ type WapEncrypt struct {
 	Source *Source
 }
 
+// Deprecated: NewWapEncrypt use v3 instead
 func NewWapEncrypt(config *WapEncryptConfig, source *Source) (*WapEncrypt, error) {
 	if config.Token == "" { // fix issue #36
 		config.Token = getRandStr(32)
@@ -99,15 +100,6 @@ type sourceDataTmp struct {
 	Body    map[string]interface{} `json:"body"`
 	QTime   int64                  `json:"qtime"`
 	RandStr string                 `json:"ranstr"` // 这个 key 是 ranstr
-}
-
-// 暂时不需要用到 仅作为标识
-type sourceDataNew struct {
-	Data     string `json:"data"`
-	Sign     string `json:"sign"`
-	AppId    string `json:"appid"`
-	Terminal string `json:"terminal"`
-	Version  string `json:"version"`
 }
 
 // getInjectData data 注入
