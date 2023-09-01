@@ -9,7 +9,6 @@ import (
 var errState = fmt.Errorf("state != 1")
 
 func checkState(state interface{}) error {
-	logx.Infof("state is : %v", state)
 	switch state.(type) {
 	case float64: // 变成了 float64
 		if state == float64(1) {
@@ -21,6 +20,7 @@ func checkState(state interface{}) error {
 		}
 	}
 
+	logx.Errorf("err state is : %v", state)
 	// 其他情况都是返回错误
 	return errState
 }
