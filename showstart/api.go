@@ -27,9 +27,9 @@ type ShowStart struct {
 
 func NewShowStart(cookies *WapEncryptConfigV3, client *resty.Client) API {
 	if client == nil {
-		client = resty.New().SetRetryCount(1)
+		client = resty.New().SetRetryCount(2)
 	}
-	client.SetRetryCount(1)
+	client.SetRetryCount(2)
 	return &ShowStart{Cookies: cookies, Client: client}
 }
 

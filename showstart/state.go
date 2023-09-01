@@ -2,11 +2,8 @@ package showstart
 
 import (
 	"fmt"
-
 	"github.com/zeromicro/go-zero/core/logx"
 )
-
-var errState = fmt.Errorf("state != 1")
 
 func checkState(state interface{}) error {
 	switch state.(type) {
@@ -20,9 +17,9 @@ func checkState(state interface{}) error {
 		}
 	}
 
-	logx.Errorf("err state is : %v", state)
+	logx.Errorf("err state: %v", state)
 	// 其他情况都是返回错误
-	return errState
+	return fmt.Errorf("err state: %v", state)
 }
 
 func getState(state interface{}) string {
